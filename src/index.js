@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-ReactDOM.render(<App></App>, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 
-class Animal {
+/*class Animal {
     constructor(name, age) {
         this.name = name;
         this.age = age;
@@ -33,4 +33,4 @@ class Lion extends Animal {
 const lion1 = new Lion('Mufasa', 20, 'golden', 25);
 lion1.speak();
 lion1.roar();
-console.log(lion1);
+console.log(lion1);*/
