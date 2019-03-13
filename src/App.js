@@ -36,7 +36,7 @@ class App extends Component {
 
         return (
             <div>
-                <img src={profilePic} alt='profile' class='profile' />
+                <img src={profilePic} alt='profile' className='profile' />
                 <h1>This is the main content</h1>
                 { bio }
                 <hr />
