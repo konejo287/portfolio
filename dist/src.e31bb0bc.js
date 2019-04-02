@@ -24135,7 +24135,7 @@ var PROJECTS = [{
 }];
 var _default = PROJECTS;
 exports.default = _default;
-},{"../assets/project1.png":"assets/project1.png","../assets/project2.png":"assets/project2.png","../assets/project3.png":"assets/project3.png"}],"Projects.js":[function(require,module,exports) {
+},{"../assets/project1.png":"assets/project1.png","../assets/project2.png":"assets/project2.png","../assets/project3.png":"assets/project3.png"}],"components/Projects.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24145,7 +24145,7 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _projects = _interopRequireDefault(require("./data/projects"));
+var _projects = _interopRequireDefault(require("../data/projects"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24228,7 +24228,7 @@ function (_Component2) {
 
 var _default = Projects;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./data/projects":"data/projects.js"}],"assets/email_icon.png":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../data/projects":"data/projects.js"}],"assets/email_icon.png":[function(require,module,exports) {
 module.exports = "/email_icon.d6c23642.png";
 },{}],"assets/linkedin_icon.png":[function(require,module,exports) {
 module.exports = "/linkedin_icon.32d4c8f5.png";
@@ -24265,7 +24265,7 @@ var SOCIAL_PROFILES = [{
 }];
 var _default = SOCIAL_PROFILES;
 exports.default = _default;
-},{"../assets/email_icon.png":"assets/email_icon.png","../assets/linkedin_icon.png":"assets/linkedin_icon.png","../assets/github_icon.png":"assets/github_icon.png"}],"Social.js":[function(require,module,exports) {
+},{"../assets/email_icon.png":"assets/email_icon.png","../assets/linkedin_icon.png":"assets/linkedin_icon.png","../assets/github_icon.png":"assets/github_icon.png"}],"components/Social.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24275,7 +24275,7 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _socialProfiles = _interopRequireDefault(require("./data/socialProfiles"));
+var _socialProfiles = _interopRequireDefault(require("../data/socialProfiles"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24356,9 +24356,103 @@ function (_Component2) {
 
 var _default = Social_Proyects;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./data/socialProfiles":"data/socialProfiles.js"}],"assets/profile.png":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../data/socialProfiles":"data/socialProfiles.js"}],"assets/profile.png":[function(require,module,exports) {
 module.exports = "/profile.ae7bce2d.png";
-},{}],"App.js":[function(require,module,exports) {
+},{}],"components/Title.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var TITLES = ['bla bla', 'mas bla bla'];
+
+var Title =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Title, _Component);
+
+  function Title() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, Title);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Title)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_this), "state", {
+      titleIndex: 0
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "animateTitles", function () {
+      _this.titleInterval = setInterval(function () {
+        var titleIndex = _this.state.titleIndex + 1;
+
+        _this.setState({
+          titleIndex: titleIndex
+        });
+      }, 4000);
+    });
+
+    return _this;
+  }
+
+  _createClass(Title, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      console.log('this component has mounted');
+      this.animateTitles();
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      console.log('unmount');
+      clearInterval(this.titleInterval);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var title = TITLES[this.state.titleIndex];
+      return _react.default.createElement("p", null, "I am ", title);
+    }
+  }]);
+
+  return Title;
+}(_react.Component);
+
+var _default = Title;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"components/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24372,7 +24466,9 @@ var _Projects = _interopRequireDefault(require("./Projects"));
 
 var _Social = _interopRequireDefault(require("./Social"));
 
-var _profile = _interopRequireDefault(require("./assets/profile.png"));
+var _profile = _interopRequireDefault(require("../assets/profile.png"));
+
+var _Title = _interopRequireDefault(require("./Title"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24441,7 +24537,7 @@ function (_Component) {
         src: _profile.default,
         alt: "profile",
         className: "profile"
-      }), _react.default.createElement("h1", null, "This is the main content"), bio, _react.default.createElement("hr", null), _react.default.createElement(_Projects.default, null), _react.default.createElement("hr", null), _react.default.createElement(_Social.default, null));
+      }), _react.default.createElement("h1", null, "This is the main content"), this.state.displayBio ? _react.default.createElement(_Title.default, null) : null, bio, _react.default.createElement("hr", null), _react.default.createElement(_Projects.default, null), _react.default.createElement("hr", null), _react.default.createElement(_Social.default, null));
     }
   }]);
 
@@ -24450,7 +24546,7 @@ function (_Component) {
 
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Projects":"Projects.js","./Social":"Social.js","./assets/profile.png":"assets/profile.png"}],"index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Projects":"components/Projects.js","./Social":"components/Social.js","../assets/profile.png":"assets/profile.png","./Title":"components/Title.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -24459,7 +24555,7 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 
 require("./index.css");
 
-var _App = _interopRequireDefault(require("./App"));
+var _App = _interopRequireDefault(require("./components/App"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24494,7 +24590,7 @@ const lion1 = new Lion('Mufasa', 20, 'golden', 25);
 lion1.speak();
 lion1.roar();
 console.log(lion1);*/
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./index.css":"index.css","./App":"App.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./index.css":"index.css","./components/App":"components/App.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -24521,7 +24617,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50134" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52133" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
