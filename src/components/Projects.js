@@ -14,7 +14,7 @@ const Project = props => {
     )
 }
 
-const Projects = () => (                   // ( )  sinonimo de tener 'return', se reemplazo por las '{}'
+const Projects = () => (            // ( ) sinonimo de tener 'return', se reemplazo por las '{ }'
     <div>
         <h2>Highlighted projects</h2>
         <div>

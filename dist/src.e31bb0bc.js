@@ -24164,7 +24164,7 @@ var Project = function Project(props) {
 };
 
 var Projects = function Projects() {
-  return (// ( )  sinonimo de tener 'return', se reemplazo por las '{}'
+  return (// ( ) sinonimo de tener 'return', se reemplazo por las '{ }'
     _react.default.createElement("div", null, _react.default.createElement("h2", null, "Highlighted projects"), _react.default.createElement("div", null, _react.default.createElement("div", null, _projects.default.map(function (PROJECT) {
       return _react.default.createElement(Project, {
         key: PROJECT.id,
@@ -24432,6 +24432,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+var normalJoke = {};
+
 var Jokes =
 /*#__PURE__*/
 function (_Component) {
@@ -24451,8 +24453,11 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Jokes)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
     _defineProperty(_assertThisInitialized(_this), "state", {
-      joke: {}
+      joke: {},
+      jokes: []
     });
+
+    _defineProperty(_assertThisInitialized(_this), "normalJoke", void 0);
 
     return _this;
   }
@@ -24462,22 +24467,32 @@ function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      fetch('https://official-joke-api.appspot.com/random_joke').then(function (response) {
-        console.log('this is the response', response);
-        return response.json();
-      }).then(function (json) {
-        return _this2.setState({
-          joke: json
+      fetch('https://official-joke-api.appspot.com/random_ten').then(function (response) {
+        var json = response.json().then(function (json) {
+          _this2.setState({
+            jokes: json
+          });
         });
-      });
+      }); // Otra manera de 'chainear' las promesas. Debido a que 'response.json'
+      // regresa una promesa.
+
+      /*.then((json) => {
+              this.setState({ jokes: json })
+          }
+      )*/
     }
   }, {
     key: "render",
     value: function render() {
-      var _this$state$joke = this.state.joke,
-          setup = _this$state$joke.setup,
-          punchline = _this$state$joke.punchline;
-      return _react.default.createElement("div", null, _react.default.createElement("h2", null, "Joke"), _react.default.createElement("p", null, setup, " ", _react.default.createElement("em", null, punchline)));
+      var _this$state$jokes = this.state.jokes,
+          setup = _this$state$jokes.setup,
+          punchline = _this$state$jokes.punchline;
+      console.log('rendering the json: ', this.state.jokes);
+      return _react.default.createElement("div", null, _react.default.createElement("h2", null, "Jokes"), this.state.jokes.map(function (joke) {
+        return _react.default.createElement("p", {
+          key: joke.id
+        }, joke.setup, " ", _react.default.createElement("em", null, joke.punchline));
+      }));
     }
   }]);
 
@@ -24653,7 +24668,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59143" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59516" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
